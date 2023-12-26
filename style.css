@@ -1,0 +1,46 @@
+#header{
+    text-align: center;
+    text-decoration: none;
+    font-family: ;
+}
+ nav ul{
+    display: inline-block;
+    padding: 20px 25px;
+    border-color: aquamarine;
+}
+ul a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    letter-spacing: 2px;
+    text-transform: capitalize;
+    padding-right: 2px;
+}
+nav a:hover{
+    animation-name: lor;
+    animation-iteration-count: 2;
+    animation-duration: 5s;
+}
+
+@keyframes lor{
+    100%{color:cyan;font-size: 10.8px;}
+}
+
+nav{
+    border: 1px solid black;
+}
+img{
+    border-radius: 50%;
+}
+#date{
+    font-size: small;
+    font-family: cursive;
+}
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center
+  }
+  .text {
+    font-size: 20px;
+    padding-left: 20px;
+  }
