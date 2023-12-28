@@ -1,19 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KGB|Khay's Gist Blog</title>
+    <title>KGB | Khay's Gist Blog</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="apple-touch-icon" sizes="180x180" href="android-chrome-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-    <link rel="manifest" href="site.webmanifest">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon_io (1)/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon_io (1)/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon_io (1)/favicon-16x16.png">
+    <link rel="manifest" href="favicon_io (1)/site.webmanifest">
     <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            overflow: hidden;
+        }
+
+        #date {
+            text-align: end;
+            margin: 20px;
+            color: #fff;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background: linear-gradient(45deg, #f06, #9f6);
+            color: #fff;
+        }
+
+        .image {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .image img {
+            width: 200px;
+            border-radius: 50%;
+            border: 2px solid #fff;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+        }
+
+        #header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin: 0;
+        }
+
+        #links {
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            display: inline-block;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul a {
+            text-decoration: none;
+            color: #fff;
+            padding: 10px 15px;
+            display: inline-block;
+        }
+
         .toggle-container {
             display: flex;
             align-items: center;
             position: relative;
+            cursor: pointer;
         }
 
         .track {
@@ -29,7 +95,7 @@
         .ball {
             width: 26px;
             height: 26px;
-            background-color: #000000; 
+            background-color: #000;
             border: solid black;
             border-radius: 50%;
             position: absolute;
@@ -45,31 +111,24 @@
 
         .active .ball {
             transform: translateX(100%);
-
         }
 
-        body {
-            background-color: #ffffff;
-            color: #302e2e;
-            transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
-        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
 
-        body.dark-mode {
-            background-color: rgba(32, 32, 32, 0.655); 
-            color: #fff; /
-          }
+            to {
+                opacity: 1;
+            }
+        }
     </style>
 </head>
-<body class="light-mode">
-    <p id="date" style="text-align: end;"></p>
-    <script>
-        const d = new Date();
-        document.getElementById("date").innerHTML = d.toDateString();
-    </script>
 
+<body class="light-mode">
     <div class="container">
         <div class="image">
-            <img src="KGB.png" alt="LOGO" width="200px">
+            <img src="img/KGB.png" alt="LOGO">
         </div>
         <div id="header">
             <h1>Khay's Gist Blog</h1>
@@ -94,7 +153,15 @@
         </div>
     </div>
 
+    <p id="date"></p>
+
     <script>
+        const d = new Date();
+        document.getElementById("date").innerHTML = d.toDateString();
+
+        // Add an entrance animation
+        document.body.style.animation = "fadeIn 1s ease-in-out forwards";
+
         function toggleButton() {
             var container = document.querySelector('.toggle-container');
             container.classList.toggle('active');
@@ -102,4 +169,5 @@
         }
     </script>
 </body>
+
 </html>
