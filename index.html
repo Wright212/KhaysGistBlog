@@ -5,139 +5,138 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KGB | Khay's Gist Blog</title>
-   /* <link rel="stylesheet" href="style1.css"> */
+    <link rel="stylesheet" href="style.css">
     <link rel="apple-touch-icon" sizes="180x180" href="favicon_io (1)/android-chrome-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-    <link rel="manifest" href="site.webmanifest">
-   <style>
-    body {
-        margin: 0;
-        font-family: 'Arial', sans-serif;
-        overflow: hidden;
-        color: black; /* Update text color to black or a suitable color */
-    }
-
-    #date {
-        text-align: end;
-        margin: 20px;
-        color: #fff;
-    }
-
-    .container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        height: 100vh;
-        background: linear-gradient(45deg, #f06, #9f6);
-        color: #fff;
-    }
-
-    .image {
-        text-align: center;
-        margin-bottom: 20px;
-    }
-
-    .image img {
-        width: 200px;
-        border-radius: 50%;
-        border: 2px solid #fff;
-        box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
-    }
-
-    #header {
-        text-align: center;
-        margin-bottom: 20px;
-    }
-
-    h1 {
-        font-size: 2.5em;
-        margin: 0;
-    }
-
-    #links {
-        background-color: rgba(0, 0, 0, 0.6);
-        padding: 10px;
-        text-align: center;
-    }
-
-    nav ul {
-        list-style: none;
-        display: inline-block;
-        margin: 0;
-        padding: 0;
-    }
-
-    nav ul a {
-        text-decoration: none;
-        color: #fff;
-        padding: 10px 15px;
-        display: inline-block;
-    }
-
-    .content {
-        text-align: center;
-        margin: 20px;
-    }
-
-    .toggle-container {
-        display: flex;
-        align-items: center;
-        position: relative;
-        cursor: pointer;
-    }
-
-    .track {
-        width: 60px;
-        height: 30px;
-        background-color: #fff;
-        border-radius: 15px;
-        position: relative;
-        margin: 0 10px;
-        transition: background-color 0.3s ease-in-out;
-    }
-
-    .ball {
-        width: 26px;
-        height: 26px;
-        background-color: #000;
-        border: solid black;
-        border-radius: 50%;
-        position: absolute;
-        top: 2px;
-        left: 2px;
-        transition: transform 0.3s ease-in-out;
-        transform: translateY(-2px);
-    }
-
-    .active .track {
-        background-color: #8fe8b4;
-    }
-
-    .active .ball {
-        transform: translateX(100%);
-    }
-
-    @keyframes fadeIn {
-        from {
-            opacity: 0;
-            transform: translateY(-20px);
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon_io (1)/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon_io (1)/favicon-16x16.png">
+    <link rel="manifest" href="favicon_io (1)/site.webmanifest">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            overflow: hidden;
+            color: #000; /* Update text color to black or a suitable color */
         }
 
-        to {
-            opacity: 1;
-            transform: translateY(0);
+        #date {
+            text-align: end;
+            margin: 20px;
+            color: #fff;
         }
-    }
-</style>
 
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background: linear-gradient(45deg, #f06, #9f6), linear-gradient(135deg, #00c3ff, #ffff1c);
+            color: #fff;
+        }
+
+        .image {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .image img {
+            width: 200px;
+            border-radius: 50%;
+            border: 2px solid #fff;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+        }
+
+        #header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin: 0;
+        }
+
+        #links {
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            display: inline-block;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul a {
+            text-decoration: none;
+            color: #fff;
+            padding: 10px 15px;
+            display: inline-block;
+        }
+
+        .content {
+            text-align: center;
+            margin: 20px;
+        }
+
+        .toggle-container {
+            display: flex;
+            align-items: center;
+            position: relative;
+            cursor: pointer;
+        }
+
+        .track {
+            width: 60px;
+            height: 30px;
+            background-color: #fff;
+            border-radius: 15px;
+            position: relative;
+            margin: 0 10px;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .ball {
+            width: 26px;
+            height: 26px;
+            background-color: #000;
+            border: solid black;
+            border-radius: 50%;
+            position: absolute;
+            top: 2px;
+            left: 2px;
+            transition: transform 0.3s ease-in-out;
+            transform: translateY(-2px);
+        }
+
+        .active .track {
+            background-color: #8fe8b4;
+        }
+
+        .active .ball {
+            transform: translateX(100%);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
 </head>
 
 <body class="light-mode">
     <div class="container">
         <div class="image">
-            <img src="KGB.png" alt="LOGO">
+            <img src="img/KGB.png" alt="LOGO">
         </div>
         <div id="header">
             <h1>Khay's Gist Blog</h1>
