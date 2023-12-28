@@ -30,7 +30,7 @@
             width: 26px;
             height: 26px;
             background-color: #000000; 
-            border: solid black;
+            border: 2px solid silver;
             border-radius: 50%;
             position: absolute;
             top: 2px;
@@ -49,9 +49,13 @@
         }
 
         body {
-            background-color: #ffffff;
-            color: #302e2e;
-            transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    background: linear-gradient(135deg, #3498db, #8e44ad);
+    color: #fff; /* Set text color to white or a suitable contrast color */
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    overflow: hidden;
+    color: #302e2e;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
         }
 
         body.dark-mode {
@@ -69,7 +73,7 @@
 
     <div class="container">
         <div class="image">
-            <img src="img/KGB.png" alt="LOGO" width="200px">
+            <img src="KGB.png" alt="LOGO" width="200px">
         </div>
         <div id="header">
             <h1>Khay's Gist Blog</h1>
