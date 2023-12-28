@@ -10,12 +10,56 @@
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
     <link rel="manifest" href="site.webmanifest">
     <style>
-        img {
+        #header{
+    text-align: center;
+    text-decoration: none;
+    font-family: ;
+}
+ nav ul{
+    display: inline-block;
+    padding: 20px 25px;
+    border-color: aquamarine;
+}
+ul a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    letter-spacing: 2px;
+    text-transform: capitalize;
+    padding-right: 2px;
+}
+nav a:hover{
+    animation-name: lor;
+    animation-iteration-count: 2;
+    animation-duration: 5s;
+}
+
+@keyframes lor{
+    100%{color:cyan;font-size: 10.8px;}
+}
+
+nav{
+    border: 1px solid black;
+}
+img{
     width: 200px;
     border-radius: 50%;
     border: 2px solid silver; /* Set the border color and width */
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
 }
+#date{
+    font-size: small;
+    font-family: cursive;
+}
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center
+  }
+  .text {
+    font-size: 20px;
+    padding-left: 20px;
+  }
         .toggle-container {
             display: flex;
             align-items: center;
@@ -69,15 +113,24 @@ body.dark-mode {
 <body class="light-mode">
     <p id="date" style="text-align: end;"></p>
     <script>
-        const d = new Date();
-        document.getElementById("date").innerHTML = d.toDateString();
+        <script>
+    const d = new Date();
+    document.getElementById("date").innerHTML = d.toDateString();
+
+    function toggleButton() {
+        var container = document.querySelector('.toggle-container');
+        container.classList.toggle('active');
+        document.body.classList.toggle('dark-mode');
+    }
+
     document.addEventListener('DOMContentLoaded', function () {
         var container = document.querySelector('.toggle-container');
         container.addEventListener('click', function () {
-            container.classList.toggle('active');
-            document.body.classList.toggle('dark-mode');
+            toggleButton();
         });
     });
+</script>
+
     </script>
 
     <div class="container">
